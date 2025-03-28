@@ -54,8 +54,8 @@ public class LFG {
     public static void main(String[] args) {
         Properties properties = new Properties();
         
-        try (FileInputStream fis = new FileInputStream("config.properties")) {
-            properties.load(fis);
+        try (FileInputStream config = new FileInputStream("config.properties")) {
+            properties.load(config);
 
             int n = Integer.parseInt(properties.getProperty("n"));
             int t = Integer.parseInt(properties.getProperty("t"));
